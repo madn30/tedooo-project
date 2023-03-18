@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import FeedItem from './Card/FeedCard';
+import FeedCard from './Card/FeedCard';
 import { FeedItems } from '../../types/feedItem';
 
 const Feed = () => {
@@ -30,7 +30,7 @@ const Feed = () => {
 	};
 
 	const renderedItems = items.slice(0, currentIndex).map((item, index) => (
-		<FeedItem
+		<FeedCard
 			key={item.id}
 			item={item}
 			onIntersect={index === currentIndex - 1 ? handleIntersection : undefined}
