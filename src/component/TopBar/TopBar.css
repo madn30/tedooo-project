@@ -1,0 +1,122 @@
+
+.topbar-container {
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.topbar-content {
+  padding-left: 24px;
+  padding-right: 24px;
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.nav-item {
+  /* Add any default styles for the nav items */
+  position: relative; /* Make sure the position is set to relative */
+  margin-top: 8px;
+  height: 19px;
+}
+
+.nav-item.clicked::after {
+  content: ""; /* Create an empty content for the pseudo-element */
+  position: absolute; /* Position the pseudo-element absolutely within the nav-item */
+  left: 0; /* Align the left edge with the left edge of the nav-item */
+  right: 0; /* Align the right edge with the right edge of the nav-item */
+  bottom: -16px; /* Align the bottom edge with the bottom edge of the nav-item */
+  border-bottom: 2px solid #2db8a1;; /* Add a bottom border */
+}
+.nav-item.clicked {
+  color: #2db8a1; /* Change the background color to red when clicked */
+}
+.left {
+  display: flex;
+  align-items: center;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+}
+
+.right > div {
+  display: flex;
+  align-items: center;
+  margin-left: 30px;
+}
+
+.right > div:hover {
+  cursor: pointer;
+}
+.header-logo{ 
+border-radius: 10px;
+}
+
+.header-avatar {
+  border-radius: 50%;
+  margin-left: 30px;
+}
+
+
+.messaging {
+  margin-left: 10px;
+  font-size: 16px;
+}
+.hamburger {
+  display: none;
+}
+
+.hamburger-menu {
+  display: none;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+  .hamburger-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  }
+
+  .hamburger-menu.show {
+    display: flex;
+  }
+  .nav-item {
+    padding:15px 0px ;
+    cursor: pointer; /* Add a bottom border */
+
+  }
+  .nav-item.clicked {
+    border-bottom: unset; /* Add a bottom border */
+  }
+  .nav-item.clicked::after {
+    border-bottom: unset; /* Add a bottom border */
+  }
+  .right {
+    padding: 10px;
+    display: none;
+  }
+}

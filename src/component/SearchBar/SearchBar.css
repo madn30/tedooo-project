@@ -1,0 +1,33 @@
+.search-bar-container {
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
+  padding: 10px 12px;
+  background-color: #f0f0f0;
+  transition: all 0.3s;
+  position: relative; /* Add this to create a new stacking context for the icon */
+}
+
+.search-bar-container:hover {
+  border-color: #999999;
+}
+
+.search-bar-container:focus-within {
+  border-color: #333333;
+}
+
+.search-input {
+  border: none;
+  outline: none;
+  font-size: 14px;
+  width: 100%;
+  margin-left: 8px;
+  background-color: transparent;
+  padding-left: 24px; /* Add padding to make room for the icon */
+}
+
+.search-icon {
+  color: #bec0bf;
+  position: absolute;
+  left: 16px; /* Position the icon inside the input field */
+}
