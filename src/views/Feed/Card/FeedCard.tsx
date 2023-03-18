@@ -77,7 +77,7 @@ const FeedCard: React.FC<FeedCardProps> = ({ item, onIntersect }) => {
 					<div className="details">
 						<span>{item.username}</span>
 						<div>
-							<span className="shop-name">{item.shopName}</span>
+							<span className="shop-name">{item.shopName || 'Pending...'}</span>
 							<span className="date">{moment(item.date).fromNow(true)}</span>
 						</div>
 					</div>

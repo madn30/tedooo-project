@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import FeedItem from './Card/FeedCard';
 import { FeedItems } from '../../types/feedItem';
+import mock from '../../mock.json';
 
 const Feed = () => {
 	const [items, setItems] = useState<FeedItems>([]);
@@ -29,7 +30,7 @@ const Feed = () => {
 		setCurrentIndex((prevIndex) => prevIndex + 6);
 	};
 
-	const renderedItems = items.slice(0, currentIndex).map((item, index) => (
+	const renderedItems = mock.data.slice(0, currentIndex).map((item:any, index) => (
 		<FeedItem
 			key={item.id}
 			item={item}

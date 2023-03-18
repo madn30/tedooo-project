@@ -42,7 +42,7 @@ const TopBar = () => {
 					</div>
 					<div className={`nav-item${ clickedDiv === 'notifications' ? ' clicked' : '' }`} onClick={() => handleClick('notifications')}>
 						<NotificationsIcon />
-						<span className="messaging">Notification</span>
+						<span className="messaging">Notifications</span>
 					</div>
 					<Avatar src={profile} height={100} width={100} className="header-avatar"/>
 				</div>
@@ -63,7 +63,7 @@ const TopBar = () => {
 					</div>
 					<div className={`nav-item${ clickedDiv === 'notifications' ? ' clicked' : '' }`} onClick={() => handleClick('notifications')}>
 						<NotificationsIcon />
-						<span className="messaging">Notification</span>
+						<span className="messaging">Notifications</span>
 					</div>
 				</div>
 				}
