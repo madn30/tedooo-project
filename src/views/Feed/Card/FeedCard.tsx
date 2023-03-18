@@ -13,7 +13,7 @@ interface FeedCardProps {
 
 const FeedCard: React.FC<FeedCardProps> = ({ item, onIntersect }) => {
 	const ref = useRef<HTMLDivElement>(null);
-	const [isLiked,setIsLiked] = useState(false);
+	const [isLiked,setIsLiked] = useState(item.didLike || false);
 
 	const sendImpression = async () => {
 		console.log('TRIGGER',item);
